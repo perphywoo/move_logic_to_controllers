@@ -214,7 +214,7 @@ When you refresh the price changes to 10 in our form. This is because rails is d
     <%= f.label :name %><br />
     <%= f.text_field :name %>
 
-Since Rails knows our form is for our `@product` wich has a `@product.name` method, it can assume (correctly so) that the value of `@product.name` and that field are related. This is why whenever you enter a 'name' into the controller like `@product = Product.new(:name => 'sneakers')` it shows up in the field. But what about when we submit our form? How does rails know the values we submitted. Take a look into the `products_controller.rb` file, the create action. (Note i use 'action' and 'method' interchangeably when refering to ruby objects, they are the same thing). Here we are creating a `@product` by passing our parameters hash into `Product.new`
+Since Rails knows our form is for our `@product` which has a `@product.name` method, it can assume (correctly so) that the value of `@product.name` and that field are related. This is why whenever you enter a 'name' into the controller like `@product = Product.new(:name => 'sneakers')` it shows up in the field. But what about when we submit our form? How does rails know the values we submitted. Take a look into the `products_controller.rb` file, the create action. (Note i use 'action' and 'method' interchangeably when refering to ruby objects, they are the same thing). Here we are creating a `@product` by passing our parameters hash into `Product.new`
 
     def create
       @product = Product.new(params[:product])
@@ -479,4 +479,3 @@ Congrats, you've successfully made a way to Create Read Update & Delete a produc
 If you take a look at the code in the users_controller.rb  you should be able to understand most of what is going on. If not, make a note and we can talk about it in class. You should also be able to look through the views in `app/views/users` and understand most of what is going on as well.
 
 At this point we've covered the foundation of using Rails, from designing a database table, querying that table with a Model building Views with erb, controlling what views we see with Controllers and using Routes to map that all to urls that every browser can understand. There is still plenty to learn, but you now have the building blocks in your hands to start building the next facebook or instagram. The rest is just details :)
-
