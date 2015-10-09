@@ -460,7 +460,7 @@ At this point and time we've got [C]reate [R]ead [U]pdate and need to implement 
 
 Since we don't need a view thats all we had to do. Now we can add a button to delete a product anywhere we want. Open up `app/views/products/show.html.erb` and add a delete button.
 
-    <%= link_to 'Destroy', @product, :method => :delete, :data => { :confirm => 'Are you sure?' } %>
+    <%= button_to 'Destroy', @product, :method => :delete, :data => { :confirm => 'Are you sure?' } %>
 
 Like we saw with the `redirect_to @product`, `link_to` understands that if you are using a `@product` that has saved to the database, and the `:delete` HTTP method that you intend to link to the ProductsController and the destroy action. If you're fuzzy on how that makes sense, try taking a look at the output of rake routes. We could also hard code a url, but as I mentioned that makes things a bit messier to change in the future.
 
