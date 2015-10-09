@@ -352,7 +352,7 @@ The final element is `products#index` which is short hand for the products contr
 
 Now that we have all of these routes, let's finish our Update and Delete actions.
 
-Right now we've built a vew to list all products in our possession, on the index page, but we don't have a way to view just a single product. We'll make a quick show view. Create a file called show.html.erb at `app/views/products/show.html.erb`. Then add this to it:
+Right now we've built a view to list all products in our possession, on the index page, but we don't have a way to view just a single product. We'll make a quick show view. Create a file called show.html.erb at `app/views/products/show.html.erb`. Then add this to it:
 
     <p>
       <b>Name:</b>
